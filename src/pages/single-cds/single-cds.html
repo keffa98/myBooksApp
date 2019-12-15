@@ -1,0 +1,18 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ cd.title }}</ion-title>
+    <ion-buttons>
+      <button ion-button clear (click)="dismissModal()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+  <ion-card-header>Title : {{ cd.title }}</ion-card-header>
+  <ion-card-content>
+    <p *ngFor="let desc of cd.description">{{ cd.description }}</p>
+  </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -5,15 +5,20 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-list>
-      <button ion-button icon-start (click)="onNavigate(travelsPage)">
-        <ion-icon name="plane"></ion-icon>
-        Travels
+    <ion-list ion-item>
+      <button ion-button full icon-start (click)="onNavigate(booksPage)">
+        <ion-icon name="book"></ion-icon>
+        Books
       </button>
-      <button ion-button icon-start (click)="onNavigate(settingsPage)">
+      <button ion-button full icon-start (click)="onNavigate(cdsPage)">
+        <ion-icon name="disc"></ion-icon>
+        CD
+      </button>
+      <button ion-button full icon-start (click)="onNavigate(settingsPage)">
         <ion-icon name="settings"></ion-icon>
         Settings
       </button>
+
     </ion-list>
   </ion-content>
 </ion-menu>

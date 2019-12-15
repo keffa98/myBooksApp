@@ -1,40 +1,39 @@
 import {Component, OnInit} from '@angular/core';
 import {NavController, NavParams, ViewController} from 'ionic-angular';
-import {TravelsService} from "../../../services/travels.service";
-import {TravelsModel} from "../../../models/travels.model";
+import {BooksModel} from "../../models/books.model";
+import {BooksService} from "../../services/books.service";
 
 /**
- * Generated class for the SingleTravelPage page.
+ * Generated class for the SingleBookPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
 @Component({
-  selector: 'page-single-travel',
-  templateUrl: 'single-travel.html',
+  selector: 'page-single-book',
+  templateUrl: 'single-book.html',
 })
-export class SingleTravelPage implements OnInit{
-
+export class SingleBookPage implements OnInit{
   index: number;
-  travel: TravelsModel;
+  book: BooksModel;
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public viewCtrl: ViewController,
-              public travelsService: TravelsService) {
+              public booksService: BooksService) {
   }
 
   ngOnInit() {
     this.index = this.navParams.get('index');
-    this.travel = this.travelsService.travelList[this.index];
+    this.book = this.booksService.bookList[this.index];
   }
 
   dismissModal() {
     this.viewCtrl.dismiss();
   }
 
-  onToggleTravel() {
-    this.travel.isDone = !this.travel.isDone;
-    console.log(this.travel.isDone);
+  onToggleBook() {
+    this.book.isLend = !this.book.isLend;
+    console.log(this.book.isLend);
   }
 }

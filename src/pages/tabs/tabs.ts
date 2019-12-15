@@ -1,15 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {TravelsPage} from "../travels/travels";
+import {BooksPage} from "../books/books";
 import {SettingsPage} from "../settings/settings";
 import {HomePage} from "../home/home";
-
-/**
- * Generated class for the TabsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {CdsPage} from "../cds/cds";
 
 @Component({
   selector: 'page-tabs',
@@ -17,9 +11,10 @@ import {HomePage} from "../home/home";
 })
 export class TabsPage {
 
-  travelsPage = TravelsPage;
+  booksPage = BooksPage;
   settingsPage = SettingsPage;
   homePage = HomePage;
+  cdPage = CdsPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

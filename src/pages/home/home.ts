@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {MenuController, NavController} from 'ionic-angular';
-import {TravelsPage} from "../travels/travels";
+import {BooksPage} from "../books/books";
 import {SettingsPage} from "../settings/settings";
 
 @Component({
@@ -12,10 +12,10 @@ export class HomePage {
   constructor(public navCtrl: NavController,
               private menuCtrl: MenuController){}
 
-  travelsPage = TravelsPage;
+  booksPage = BooksPage;
   settingsPage = SettingsPage;
-  onGoToTravels() {
-    this.navCtrl.push(TravelsPage);
+  onGoToBooks() {
+    this.navCtrl.push(BooksPage);
   }
   onToggleMenu() {
     this.menuCtrl.open();

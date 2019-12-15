@@ -5,18 +5,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import {SettingsPage} from "../pages/settings/settings";
-import {TravelsPage} from "../pages/travels/travels";
+import {BooksPage} from "../pages/books/books";
 import {TabsPage} from "../pages/tabs/tabs";
-//import {TabsPage} from "../pages/tabs/tabs";
+import {CdsPage} from "../pages/cds/cds";
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
  // rootPage:any = TabsPage;
-  // rootPage:any = HomePage;
+ //  rootPage:any = HomePage;
   tabsPage: any = TabsPage;
-  travelsPage: any = TravelsPage;
+  booksPage: any = BooksPage;
   settingsPage: any = SettingsPage;
+  cdsPage: any = CdsPage;
   @ViewChild('content') content: NavController;
 
 

@@ -1,7 +1,6 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Home Page </ion-title>
-
     <ion-buttons start>
         <button ion-button icon-only (click)="onToggleMenu()">
           <ion-icon name="menu"></ion-icon>
@@ -12,8 +11,8 @@
 
 <ion-content  padding>
 <!--  <button ion-button (click)="onGoToTravels()">Travels</button>-->
-  <button id="homepage" ion-button [navPush]="travelsPage">Travels</button>
+  <button  ion-button full [navPush]="booksPage">Books</button>
 
-  <button ion-button [navPush]="settingsPage">Settings</button>
+  <button ion-button full [navPush]="settingsPage">Settings</button>
 
 </ion-content>
